@@ -1,0 +1,54 @@
+#root {
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Hide scrollbar but retain functionality */
+body::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* For Firefox scrolllbar */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+main {
+  max-width: 90%;
+  margin-inline: auto;
+  flex-grow: 1;
+}
+
+.employee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1em;
+  margin: 1em 3em;
+}
+
+img {
+  display: block;
+}
+
+.selected {
+  box-shadow: 0px 0px 0px 3px hsl(0 0% 0% / 0.9);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+}
